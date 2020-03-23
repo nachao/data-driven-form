@@ -1,0 +1,21 @@
+{
+	"presets": [
+		"@babel/preset-env",
+		"@babel/preset-react"
+	],
+	"plugins": [
+		"@babel/plugin-proposal-class-properties",
+		["@zongze/babel-plugin-react-css-modules", {
+			"context": "/",
+			"filetypes": {
+				".scss": {
+					"syntax": "postcss-scss",
+					"plugins": ["postcss-nested"]
+				}
+			},
+			"webpackHotModuleReloading": false,
+			"autoResolveMultipleImports": true,
+			"skip": true
+		}]
+	]
+}
